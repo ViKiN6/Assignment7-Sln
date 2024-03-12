@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment7_.MainPage">
+
+    <StackLayout >
+        <Label
+                Text="Sign up Page "
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+        <Entry Placeholder="Name" Text="{Binding Profile.Name}" />
+        <Entry Placeholder="Surname" Text="{Binding Profile.Surname}" />
+        <Entry Placeholder="Email" Text="{Binding Profile.Email}" />
+
+
+
+              <Button Text="Load" Command="{Binding LoadCommand}" IsEnabled="{Binding LoadButtonEnabled}" Clicked="OnLoadClicked"/>
+              <Button Text="Save" Command="{Binding SaveCommand}" IsEnabled="{Binding SaveButtonEnabled}" Clicked="OnSaveClicked"/>
+
+        <Label x:Name="Message"></Label>
+        <Label x:Name="TextBox"/>
+
+    </StackLayout>
+
+    
+
+</ContentPage>
